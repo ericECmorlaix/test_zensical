@@ -331,38 +331,43 @@ link = "https://github.com/ericECmorlaix"
 # Read more:
 # - https://zensical.org/docs/setup/extensions/
 # ----------------------------------------------------------------------------
-[project.markdown_extensions.abbr]
-[project.markdown_extensions.admonition]
-[project.markdown_extensions.attr_list]
-[project.markdown_extensions.def_list]
-[project.markdown_extensions.footnotes]
-[project.markdown_extensions.md_in_html]
-[project.markdown_extensions.toc]
-permalink = true
-[project.markdown_extensions.pymdownx.arithmatex]
+[project.markdown_extensions.abbr] # infobulles sur abbréviations 
+[project.markdown_extensions.admonition]  # Blocs colorés  !!! info "ma remarque"
+[project.markdown_extensions.attr_list] # Un peu de CSS et des attributs HTML.
+[project.markdown_extensions.def_list] # Les listes de définition.
+[project.markdown_extensions.footnotes] # Notes[^1] de bas de page.  [^1]: ma note.
+[project.markdown_extensions.md_in_html] # markdown dans du HTML
+[project.markdown_extensions.toc] # Table des matières
+permalink = "⚓︎"
+toc_depth = 3
+[project.markdown_extensions.pymdownx.arithmatex] # Formules en LaTeX 
 generic = true
+[project.markdown_extensions.pymdownx.blocks.caption] # figure et figcaption https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/caption/
 [project.markdown_extensions.pymdownx.betterem]
-[project.markdown_extensions.pymdownx.caret]
-[project.markdown_extensions.pymdownx.details]
-[project.markdown_extensions.pymdownx.emoji]
+[project.markdown_extensions.pymdownx.caret] # Passage ^^souligné^^ ou en ^exposant^.
+[project.markdown_extensions.pymdownx.details] #   qui peuvent se plier/déplier.
+[project.markdown_extensions.pymdownx.emoji] # Émojis  :boom:
 emoji_generator = "zensical.extensions.emoji.to_svg"
 emoji_index = "zensical.extensions.emoji.twemoji"
-[project.markdown_extensions.pymdownx.highlight]
+[project.markdown_extensions.pymdownx.highlight] # Coloration syntaxique du code
 anchor_linenums = true
 line_spans = "__span"
 pygments_lang_class = true
-[project.markdown_extensions.pymdownx.inlinehilite]
-[project.markdown_extensions.pymdownx.keys]
-[project.markdown_extensions.pymdownx.magiclink]
-[project.markdown_extensions.pymdownx.mark]
-[project.markdown_extensions.pymdownx.smartsymbols]
-[project.markdown_extensions.pymdownx.superfences]
+[project.markdown_extensions.pymdownx.inlinehilite] # pour  `#!python  <python en ligne>`
+[project.markdown_extensions.pymdownx.keys] # Touches du clavier.  ++ctrl+d++
+separator = "\uff0b"
+[project.markdown_extensions.pymdownx.magiclink] # Liens automatiques
+[project.markdown_extensions.pymdownx.mark] # Passage ==surligné==.
+[project.markdown_extensions.pymdownx.smartsymbols] # https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/
+[project.markdown_extensions.pymdownx.superfences] # Imbrication de blocs.
 custom_fences = [
   { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
 ]
-[project.markdown_extensions.pymdownx.tabbed]
+[project.markdown_extensions.pymdownx.tabbed] # Volets glissants.  === "Mon volet"
 alternate_style = true
 combine_header_slug = true
-[project.markdown_extensions.pymdownx.tasklist]
+[project.markdown_extensions.pymdownx.tasklist] # Cases à cocher  - [ ]  et - [x]
 custom_checkbox = true
-[project.markdown_extensions.pymdownx.tilde]
+clickable_checkbox = true
+[project.markdown_extensions.pymdownx.tilde] # Passage ~~barré~~ ou en ~indice~.
+[project.markdown_extensions.pymdownx.snippets] # Inclusion de fichiers externe.
